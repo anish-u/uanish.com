@@ -17,11 +17,15 @@ const eslintConfig = [
       "check-file": checkFile,
     },
     rules: {
+      "no-console": ["error"],
+      "no-unused-vars": ["error"],
+      "@typescript-eslint/no-explicit-any": ["error"],
+      "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
+      "react-hooks/rules-of-hooks": "error",
       "prefer-arrow-callback": ["error"],
       "prefer-template": ["error"],
       semi: ["error"],
       quotes: ["error", "double"],
-      "no-console": ["error"],
       "check-file/filename-naming-convention": [
         "error",
         {
