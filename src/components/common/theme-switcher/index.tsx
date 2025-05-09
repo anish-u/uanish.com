@@ -11,8 +11,7 @@ export default function ThemeSwitch() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted)
-    return <FiSun className="cursor-pointer" aria-label="Mode Change Button" />;
+  if (!mounted) return null;
 
   if (resolvedTheme === "dark") {
     return (

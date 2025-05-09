@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 
-import { Providers } from "@/app/providers";
-
-import ThemeSwitch from "@/components/common/theme-switcher";
+import { Providers } from "@/contexts/providers";
 
 import { cn } from "@/utils/cn";
 
 import { siteConfig } from "@/constants/site-config";
 
-import "../globals.css";
+import "./globals.css";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -56,13 +54,14 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base antialiased",
+          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base flex h-screen min-w-screen flex-col antialiased",
           merriweather.variable
         )}
       >
         <Providers>
-          <ThemeSwitch />
-          {children}
+          <div>Navbar</div>
+          <div className="flex-grow">{children}</div>
+          <div>Footer</div>
         </Providers>
       </body>
     </html>
