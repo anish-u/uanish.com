@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Merriweather } from "next/font/google";
 
 import { cn } from "@/utils/cn";
 
@@ -7,9 +7,11 @@ import { siteConfig } from "@/constants/site-config";
 
 import "./globals.css";
 
-const fontSans = FontSans({
+const merriweather = Merriweather({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-merriweather",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -49,7 +51,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Anish" />
       </head>
       <body
-        className={cn("bg-black text-white antialiased", fontSans.variable)}
+        className={cn(
+          "text-white-base bg-black-base antialiased",
+          merriweather.variable
+        )}
       >
         {children}
       </body>

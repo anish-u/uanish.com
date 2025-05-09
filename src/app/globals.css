@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-serif: "Merriweather", "Georgia", "serif";
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-white-base: #f9f9f9;
+  --color-black-base: #191919;
+  --color-grey-base: #808080;
+
+  --color-black-light: #333333;
+  --color-black-dark: #222222;
+}
