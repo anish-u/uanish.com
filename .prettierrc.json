@@ -8,10 +8,12 @@
     "^(react|next?/?([a-zA-Z/]*))$",
     "<THIRD_PARTY_MODULES>",
     "^@/components/(.*)$",
+    "^@/contexts/(.*)$",
     "^@/services/(.*)$",
     "^@/utils/(.*)$",
     "^@/interfaces/(.*)$",
     "^@/store/(.*)$",
+    "^@/env/(.*)$",
     "^@/constants/(.*)$",
     "^[./]"
   ],
