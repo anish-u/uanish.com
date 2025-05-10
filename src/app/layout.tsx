@@ -59,9 +59,7 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <div>Navbar</div>
           <div className="flex-grow">{children}</div>
-          <div>Footer</div>
         </Providers>
       </body>
     </html>
