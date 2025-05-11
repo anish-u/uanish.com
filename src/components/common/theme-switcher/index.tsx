@@ -9,27 +9,35 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null;
-
-  if (resolvedTheme === "dark") {
+  if (!mounted || !resolvedTheme) {
     return (
-      <FiSun
-        onClick={() => setTheme("light")}
-        className="cursor-pointer"
-        aria-label="Switch to light mode"
-      />
+      <span
+        className="inline-flex items-center justify-center"
+        style={{ width: 18, height: 18 }}
+        aria-hidden="true"
+      >
+        <FiSun className="opacity-0" size={18} />
+      </span>
     );
   }
 
-  if (resolvedTheme === "light") {
-    return (
-      <FiMoon
-        onClick={() => setTheme("dark")}
-        className="cursor-pointer"
-        aria-label="Switch to dark mode"
-      />
-    );
-  }
+  return resolvedTheme === "dark" ? (
+    <FiSun
+      onClick={() => setTheme("light")}
+      className="cursor-pointer transition-opacity duration-200"
+      size={18}
+      aria-label="Switch to light mode"
+    />
+  ) : (
+    <FiMoon
+      onClick={() => setTheme("dark")}
+      className="cursor-pointer transition-opacity duration-200"
+      size={18}
+      aria-label="Switch to dark mode"
+    />
+  );
 }

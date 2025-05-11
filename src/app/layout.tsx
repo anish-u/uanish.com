@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 
+import NavBar from "@/components/common/navbar";
+
 import { Providers } from "@/contexts/providers";
 
 import { cn } from "@/utils/cn";
@@ -54,12 +56,15 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base flex h-screen min-w-screen flex-col antialiased",
+          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base h-screen w-screen antialiased",
           merriweather.variable
         )}
       >
         <Providers>
-          <div className="flex-grow">{children}</div>
+          <div className="mx-auto flex h-full max-w-xl flex-col px-6 py-10 font-normal md:max-w-2xl lg:max-w-3xl">
+            <NavBar />
+            <div className="flex-grow">{children}</div>
+          </div>
         </Providers>
       </body>
     </html>
