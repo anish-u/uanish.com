@@ -1,4 +1,4 @@
-import { NavBarLink, SiteConfig } from "@/interfaces/site-config";
+import { NavBarLink, Routes, SiteConfig } from "@/interfaces/site-config";
 
 /**
  * Site config for meta tags
@@ -10,23 +10,33 @@ export const siteConfig: SiteConfig = {
 };
 
 /**
+ * UI Routes
+ */
+export const routes: Routes = {
+  home: "/",
+  projects: "/projects",
+  experience: "/experience",
+  blog: "/blog",
+};
+
+/**
  * Navbar links
  */
 export const navBarLinks: NavBarLink[] = [
   {
     name: "Home",
-    href: "/",
+    href: routes.home,
   },
   {
     name: "Projects",
-    href: "/projects",
+    href: routes.projects,
   },
   {
     name: "Experience",
-    href: "/experience",
+    href: routes.experience,
   },
   {
     name: "Blog",
-    href: "/blog",
+    href: routes.blog,
   },
 ];
