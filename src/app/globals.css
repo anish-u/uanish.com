@@ -4,7 +4,7 @@
 
 @theme {
   /* Fonts */
-  --font-serif: "Merriweather", "Georgia", "serif";
+  --font-serif: "Merriweather", "serif";
 
   /* Colors */
   --color-white: #ffffff;
@@ -16,4 +16,42 @@
 
   --color-black-light: #333333;
   --color-black-dark: #222222;
+
+  /* Box Shadows */
+  --shadow-link: inset 0 -0.05em 0 #000;
+}
+
+@layer utilities {
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right 55s linear infinite;
+    direction: rtl;
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 55s linear infinite;
+  }
+
+  .group:hover .animate-scroll-left,
+  .group:hover .animate-scroll-right {
+    animation-play-state: paused;
+    transition: transform 2s ease-out;
+  }
 }

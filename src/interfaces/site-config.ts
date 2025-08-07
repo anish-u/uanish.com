@@ -14,3 +14,23 @@ export type NavBarLink = {
   name: string;
   href: string;
 };
+
+/**
+ * Interface for UI routes
+ */
+export type Routes = {
+  home: string;
+  projects: string;
+  experience: string;
+  blog: string;
+};
+
+/**
+ * Interface for Social Links
+ */
+export type SocialLinks = {
+  linkedIn: string;
+  github: string;
+  medium: string;
+  email: string;
+};
