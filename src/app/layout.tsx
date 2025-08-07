@@ -53,10 +53,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-title" content="Anish" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
       </head>
       <body
         className={cn(
-          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base h-screen w-screen antialiased",
+          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base h-screen w-screen overflow-x-hidden antialiased",
           merriweather.variable
         )}
       >

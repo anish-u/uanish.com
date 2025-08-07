@@ -15,9 +15,8 @@ export default function ContactSection() {
         alt="Anish Ummenthala"
         width={70}
         height={70}
-        objectFit="cover"
         aria-label="Anish Ummenthala"
-        className="aspect-auto rounded-full grayscale-40 transition-all duration-150 ease-in-out hover:grayscale-0"
+        className="aspect-auto rounded-full object-cover grayscale-40 transition-all duration-150 ease-in-out hover:grayscale-0"
       />
 
       <Link href={socialLinks.linkedIn} aria-label="LinkedIn" target="_blank">
