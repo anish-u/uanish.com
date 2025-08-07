@@ -19,6 +19,7 @@
 
   /* Box Shadows */
   --shadow-link: inset 0 -0.05em 0 #000;
+  --shadow-link-white: inset 0 -0.05em 0 #fff;
 }
 
 @layer utilities {
