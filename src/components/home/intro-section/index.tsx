@@ -4,7 +4,7 @@ import { socialLinks } from "@/constants/site-config";
 
 export default function IntroSection() {
   return (
-    <div className="flex w-full flex-col justify-center gap-6 py-4 text-justify font-serif text-base/8">
+    <div className="flex w-full flex-col justify-center gap-6 pt-4 text-justify font-serif text-base/8">
       <p>
         I&apos;m a software engineer who enjoys building secure and scalable
         systems.

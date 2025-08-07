@@ -1,6 +1,7 @@
 import Heading from "@/components/common/heading";
 import ContactSection from "@/components/home/contact-section";
 import IntroSection from "@/components/home/intro-section";
+import ProjectSection from "@/components/home/project-section";
 import SkillsSection from "@/components/home/skills-section";
 
 export default function Home() {
@@ -9,6 +10,8 @@ export default function Home() {
       <Heading type="primary">Hey, I&apos;m Anish Ummenthala.</Heading>
       <ContactSection />
       <IntroSection />
+      <Heading type="secondary">Recent Projects</Heading>
+      <ProjectSection />
       <Heading type="secondary">Technical Skills</Heading>
       <SkillsSection />
     </div>
