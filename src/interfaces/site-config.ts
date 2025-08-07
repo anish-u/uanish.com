@@ -24,3 +24,13 @@ export type Routes = {
   experience: string;
   blog: string;
 };
+
+/**
+ * Interface for Social Links
+ */
+export type SocialLinks = {
+  linkedIn: string;
+  github: string;
+  medium: string;
+  email: string;
+};

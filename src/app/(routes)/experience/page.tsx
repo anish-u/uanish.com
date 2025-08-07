@@ -1,7 +1,15 @@
+import { Metadata } from "next";
+
+import Heading from "@/components/common/heading";
+
+export const metadata: Metadata = {
+  title: "Experience",
+};
+
 export default function Home() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <p className="font-serif text-4xl font-bold">Experience</p>
+    <div className="flex h-full flex-col items-center gap-10 px-0 py-4 md:px-4 md:py-10">
+      <Heading type="secondary">Experience</Heading>
     </div>
   );
 }

@@ -16,4 +16,7 @@
 
   --color-black-light: #333333;
   --color-black-dark: #222222;
+
+  /* Box Shadows */
+  --shadow-link: inset 0 -0.05em 0 #000;
 }

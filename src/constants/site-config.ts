@@ -1,4 +1,9 @@
-import { NavBarLink, Routes, SiteConfig } from "@/interfaces/site-config";
+import {
+  NavBarLink,
+  Routes,
+  SiteConfig,
+  SocialLinks,
+} from "@/interfaces/site-config";
 
 /**
  * Site config for meta tags
@@ -40,3 +45,13 @@ export const navBarLinks: NavBarLink[] = [
     href: routes.blog,
   },
 ];
+
+/**
+ * Social links
+ */
+export const socialLinks: SocialLinks = {
+  linkedIn: "https://linkedin.com/in/uanish",
+  github: "https://github.com/Anish-U",
+  email: "mailto:ummenthala.anish@gmail",
+  medium: "https://medium.com/@ummenthala.anish",
+};
