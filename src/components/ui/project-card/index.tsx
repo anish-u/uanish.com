@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import Badge from "@/components/ui/badge";
+import FancyLink from "@/components/ui/fancy-link";
 
 import { Project } from "@/interfaces/project";
 
@@ -24,23 +23,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="mt-auto flex w-full flex-wrap gap-4 py-2">
-          <Link
-            href={project.github}
-            className="hover:shadow-link dark:hover:shadow-link-white transition-all duration-200 ease-in-out"
-          >
-            <span className="text-xs font-bold md:text-sm">
-              View on GitHub &rarr;
-            </span>
-          </Link>
+          <FancyLink link={project.github} text="View on GitHub &rarr;" />
           {project.liveDemo && (
-            <Link
-              href={project.liveDemo}
-              className="hover:shadow-link dark:hover:shadow-link-white transition-all duration-200 ease-in-out"
-            >
-              <span className="text-xs font-bold md:text-sm">
-                Live Demo &rarr;
-              </span>
-            </Link>
+            <FancyLink link={project.liveDemo} text="Live Demo &rarr;" />
           )}
         </div>
       </div>

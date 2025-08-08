@@ -1,6 +1,6 @@
-import { Experience } from "@/interfaces/experience";
+import Badge from "@/components/ui/badge";
 
-import Badge from "../badge";
+import { Experience } from "@/interfaces/experience";
 
 export interface ExperienceCardProps {
   experience: Experience;
