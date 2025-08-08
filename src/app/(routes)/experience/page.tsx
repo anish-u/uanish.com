@@ -14,11 +14,9 @@ export default function Home() {
     <div className="flex h-full flex-col items-center gap-10 px-0 py-4 md:px-4 md:py-10">
       <Heading type="secondary">Experience</Heading>
       <section className="flex flex-col gap-6">
-        <div className="relative flex flex-col gap-6">
-          {experience.map((exp, index) => (
-            <ExperienceCard key={index} experience={exp} />
-          ))}
-        </div>
+        {experience.map((exp, index) => (
+          <ExperienceCard key={index} experience={exp} />
+        ))}
       </section>
     </div>
   );
