@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 
+import Footer from "@/components/common/footer";
 import NavBar from "@/components/common/navbar";
 
 import { Providers } from "@/contexts/providers";
@@ -50,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <meta name="apple-mobile-web-app-title" content="Anish" />
         <link
@@ -60,14 +61,15 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base h-screen w-screen overflow-x-hidden antialiased",
+          "dark:text-white-base dark:bg-black-base text-black-base bg-white-base min-h-screen w-screen overflow-x-hidden antialiased",
           merriweather.variable
         )}
       >
         <Providers>
-          <div className="mx-auto flex h-full max-w-xl flex-col px-6 py-10 font-normal md:max-w-2xl lg:max-w-3xl">
+          <div className="mx-auto flex min-h-screen max-w-xl flex-col px-6 pt-10 pb-6 font-normal md:max-w-2xl lg:max-w-3xl">
             <NavBar />
             <div className="flex-grow">{children}</div>
+            <Footer />
           </div>
         </Providers>
       </body>

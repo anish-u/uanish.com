@@ -6,7 +6,7 @@ import SkillsSection from "@/components/home/skills-section";
 
 export default function Home() {
   return (
-    <div className="flex h-full flex-col items-center gap-4 px-0 py-4 md:gap-10 md:px-4 md:py-10">
+    <div className="flex h-full flex-col items-center gap-4 px-0 py-4 pb-8 md:gap-10 md:px-4 md:py-10 md:pb-16">
       <Heading type="primary">Hey, I&apos;m Anish Ummenthala.</Heading>
       <ContactSection />
       <IntroSection />
