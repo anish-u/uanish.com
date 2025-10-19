@@ -7,8 +7,8 @@ export const experience: Experience[] = [
     start: "May 2024",
     end: "Present",
     description: [
-      "Automated monthly <strong>AWS Security Hub</strong> reporting using <strong>EventBridge</strong> and <strong>Lambda</strong>, saving 4–5 hours of manual work and boosting critical issue visibility by 70%.",
-      "Redesigned and developed the <strong>CSUF ISO website</strong> in <strong>Omni CMS V5</strong>, modernizing its architecture and improving usability and maintainability.",
+      "Automated monthly <strong>AWS Security Hub</strong> reporting using <strong>EventBridge</strong> and <strong>Lambda</strong>, saving 4-5 hours of manual work and boosting critical issue visibility by 70%.",
+      "Redesigned and developed the <strong><a target='_blank' style='text-decoration: underline' title='CSUF ISO website' href='https://www.fullerton.edu/it/services/iso/'>CSUF ISO website</a></strong> in <strong>Omni CMS V5</strong>, modernizing its architecture and improving usability and maintainability.",
       "Analyzed <strong>CISA vulnerability reports</strong> for 20+ applications, identifying 50+ critical issues and driving a 40% reduction in vulnerabilities within 3 months.",
       "Built <strong>Python automation scripts</strong> to audit DUO authentication on 500+ servers, improving access control audit readiness.",
     ],
@@ -24,6 +24,7 @@ export const experience: Experience[] = [
       "Improved system response time by 50% by offloading email processing to <strong>AWS SNS</strong>, <strong>SQS</strong>, and <strong>Lambda</strong>.",
       "Implemented <strong>REST APIs</strong> with <strong>JWT authentication</strong> and role-based access, ensuring privacy and secure sessions.",
       "Deployed frontend using <strong>AWS Amplify</strong> with multi-env CI/CD pipelines for faster QA cycles.",
+      "<a target='_blank' style='text-decoration: underline' title='BoltAbacus website' href='https://boltabacus.com/'><strong>View Website</strong></a>",
     ],
     technologies: ["ReactJS", "Tailwind", "Django", "PostgreSQL", "AWS"],
   },

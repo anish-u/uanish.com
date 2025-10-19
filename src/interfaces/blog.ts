@@ -3,4 +3,5 @@ export type Blog = {
   description: string;
   link: string;
   coverImage: string;
+  tags: string[];
 };
