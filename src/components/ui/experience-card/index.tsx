@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -23,10 +23,10 @@ export default function ExperienceCard({
   const controls = useAnimation();
   const inView = useInView(ref, {
     amount: 0.25,
-    margin: "0px 0px -25px 0px",
+    margin: "0px 0px -10% 0px",
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     controls.set("hidden");
   }, [controls]);
 
