@@ -1,15 +1,45 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+import { motion, useAnimation, useInView } from "framer-motion";
+
 import Badge from "@/components/ui/badge";
 import FancyLink from "@/components/ui/fancy-link";
+
+import { cardAnimationVariants } from "@/utils/animation";
 
 import { Project } from "@/interfaces/project";
 
 export interface ProjectCardProps {
   project: Project;
+  index?: number;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, {
+    amount: 0.25,
+    margin: "0px 0px -25px 0px",
+  });
+
+  useEffect(() => {
+    controls.set("hidden");
+  }, [controls]);
+
+  useEffect(() => {
+    if (inView) controls.start("show");
+  }, [inView, controls]);
+
   return (
-    <div className="group relative z-10">
+    <motion.div
+      className="group relative z-10"
+      animate={controls}
+      variants={cardAnimationVariants}
+      custom={index}
+      ref={ref}
+    >
       <div className="border-black-base dark:border-white-base bg-white-base dark:bg-black-base relative z-20 flex h-full flex-col gap-4 rounded-md border px-7 py-4 transition-transform duration-200 ease-out group-hover:-translate-x-0.75 group-hover:-translate-y-0.75">
         <h3 className="font-serif text-lg/9 font-bold md:text-xl/10">
           {project.name}
@@ -30,6 +60,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
       <div className="border-black-base/80 bg-black-base/50 dark:bg-grey-base/50 absolute top-0 left-0 z-10 h-full w-full rounded-md border transition-transform duration-200 ease-out group-hover:translate-x-0.75 group-hover:translate-y-0.75 dark:border-white" />
-    </div>
+    </motion.div>
   );
 }

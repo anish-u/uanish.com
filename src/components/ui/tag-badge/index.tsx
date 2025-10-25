@@ -1,7 +1,10 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 type TagBadgeProps = {
   label: string;
+  index: number;
   active?: boolean;
   count?: number;
   onClick?: () => void;
@@ -12,9 +15,10 @@ export default function TagBadge({
   active = false,
   count,
   onClick,
+  index,
 }: TagBadgeProps) {
   return (
-    <button
+    <motion.button
       type="button"
       aria-pressed={active}
       onClick={onClick}
@@ -32,6 +36,13 @@ export default function TagBadge({
       ]
         .filter(Boolean)
         .join(" ")}
+      initial={{ y: 25, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.75,
+        delay: 0.05 * (index - 1),
+      }}
     >
       <span className="font-serif leading-none">{label}</span>
       {typeof count === "number" && (
@@ -46,6 +57,6 @@ export default function TagBadge({
           {count}
         </span>
       )}
-    </button>
+    </motion.button>
   );
 }

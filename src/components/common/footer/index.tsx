@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
+import { motion } from "framer-motion";
 import { BsMedium } from "react-icons/bs";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -17,7 +18,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="text-black-light dark:text-white-base border-black-light/20 dark:border-white-base/30 mt-16 flex flex-col items-center justify-center gap-3 border-t px-4 py-4 text-center text-xs md:gap-6">
+    <motion.footer
+      className="text-black-light dark:text-white-base border-black-light/20 dark:border-white-base/30 mt-16 flex flex-col items-center justify-center gap-3 border-t px-4 py-4 text-center text-xs md:gap-6"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="flex gap-2 md:gap-4">
         <Link
           href={socialLinks.github}
@@ -57,6 +64,6 @@ export default function Footer() {
           </p>
         )}
       </div>
-    </footer>
+    </motion.footer>
   );
 }

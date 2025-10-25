@@ -9,7 +9,7 @@ import TagBadge from "@/components/ui/tag-badge";
 
 import type { Blog } from "@/interfaces/blog";
 
-export default function BlogExplorer({ blogs }: { blogs: Blog[] }) {
+export default function BlogSection({ blogs }: { blogs: Blog[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -46,11 +46,11 @@ export default function BlogExplorer({ blogs }: { blogs: Blog[] }) {
 
   return (
     <>
-      {/* Tag Bar (center aligned) */}
       <div className="w-full">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-2 px-4 md:px-0">
-          {tags.map((tag) => (
+          {tags.map((tag, index) => (
             <TagBadge
+              index={index}
               key={tag}
               label={tag}
               active={selectedTag === tag}
@@ -61,10 +61,9 @@ export default function BlogExplorer({ blogs }: { blogs: Blog[] }) {
         </div>
       </div>
 
-      {/* Blog Grid */}
       <div className="mt-4 grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-2">
         {filtered.map((blog, index) => (
-          <BlogCard key={`${blog.title}-${index}`} blog={blog} />
+          <BlogCard key={`${blog.title}-${index}`} blog={blog} index={index} />
         ))}
         {filtered.length === 0 && (
           <div className="text-sm text-neutral-600 dark:text-neutral-400">
