@@ -5,7 +5,7 @@ export const cardAnimationVariants: Variants = {
   show: (i: number = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.75, ease: "easeInOut", delay: i * 0.1 },
+    transition: { duration: 0.75, ease: "easeInOut", delay: i * 0.075 },
   }),
 };
 
@@ -23,6 +23,6 @@ export const textAnimationVariants: Variants = {
   show: (i: number = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.75, ease: "easeInOut", delay: i * 0.15 },
+    transition: { duration: 0.75, ease: "easeInOut", delay: i * 0.075 },
   }),
 };
