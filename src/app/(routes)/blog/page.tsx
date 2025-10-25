@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import type { Metadata } from "next";
 
-import BlogPageSection from "@/components/blog/blogs-section";
+import BlogPageSection from "@/components/blog-section";
 import Heading from "@/components/common/heading";
 
 import { blogs } from "@/utils/blogs";

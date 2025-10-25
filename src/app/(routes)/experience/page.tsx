@@ -15,7 +15,11 @@ export default function Home() {
       <Heading type="secondary">Experience</Heading>
       <section className="flex flex-col gap-6">
         {experience.map((exp, index) => (
-          <ExperienceCard key={index} experience={exp} />
+          <ExperienceCard
+            index={index}
+            experience={exp}
+            key={`${exp.company}-${index}`}
+          />
         ))}
       </section>
     </div>

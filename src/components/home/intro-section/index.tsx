@@ -1,15 +1,17 @@
 import Link from "next/link";
 
+import Para from "@/components/ui/para";
+
 import { socialLinks } from "@/constants/site-config";
 
 export default function IntroSection() {
   return (
     <div className="flex w-full flex-col justify-center gap-6 pt-4 font-serif text-sm/6 md:text-base/8">
-      <p>
+      <Para index={1}>
         I&apos;m a software engineer who enjoys building secure and scalable
         systems.
-      </p>
-      <p>
+      </Para>
+      <Para index={2}>
         Currently pursuing my Master&apos;s in Computer Science at{" "}
         <span className="font-extrabold">
           California State University, Fullerton
@@ -19,8 +21,8 @@ export default function IntroSection() {
         <span className="font-extrabold">Amazon</span> to developing
         full-featured web interfaces using React, Next.js, TypeScript, and
         Tailwind at various startups and with the CSUF IT team.
-      </p>
-      <p>
+      </Para>
+      <Para index={3}>
         I have a deep interest in cloud architecture, especially within the{" "}
         <span className="font-extrabold">AWS</span> ecosystem, and I regularly
         write about it on{" "}
@@ -32,8 +34,8 @@ export default function IntroSection() {
         </Link>
         , where I share hands-on guides, best practices, and lessons learned
         from real-world projects
-      </p>
-      <p>
+      </Para>
+      <Para index={4}>
         Outside of work and school, I love diving into side projects, ranging
         from blockchain apps to full-stack tools, which you can find on my{" "}
         <Link
@@ -44,7 +46,7 @@ export default function IntroSection() {
         </Link>
         . When I&apos;m not coding, you&apos;ll find me playing badminton,
         learning something new in tech, or writing blogs.
-      </p>
+      </Para>
     </div>
   );
 }
