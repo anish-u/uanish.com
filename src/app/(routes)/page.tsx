@@ -1,4 +1,5 @@
 import Heading from "@/components/common/heading";
+import CertificationsSection from "@/components/home/certifications-section";
 import ContactSection from "@/components/home/contact-section";
 import IntroSection from "@/components/home/intro-section";
 import ProjectSection from "@/components/home/project-section";
@@ -14,6 +15,8 @@ export default function Home() {
       <ProjectSection />
       <Heading type="secondary">Technical Skills</Heading>
       <SkillsSection />
+      <Heading type="secondary">Certifications</Heading>
+      <CertificationsSection />
     </div>
   );
 }
