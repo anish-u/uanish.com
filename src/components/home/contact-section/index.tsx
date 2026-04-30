@@ -8,6 +8,7 @@ import Link from "next/link";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { BsMedium } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { LiaAws } from "react-icons/lia";
 import { MdEmail } from "react-icons/md";
 
 import { textAnimationVariants } from "@/utils/animation";
@@ -32,7 +33,7 @@ export default function ContactSection() {
 
   return (
     <motion.div
-      className="flex w-full items-center justify-center gap-6 pb-4"
+      className="flex w-full flex-col items-center justify-center gap-6 pb-4"
       animate={controls}
       variants={textAnimationVariants}
       ref={ref}
@@ -40,37 +41,54 @@ export default function ContactSection() {
       <Image
         src="/images/profile.png"
         alt="Anish Ummenthala"
-        width={70}
-        height={70}
+        width={140}
+        height={140}
         aria-label="Anish Ummenthala"
-        className="aspect-auto rounded-full object-cover grayscale-40 transition-all duration-150 ease-in-out hover:grayscale-0"
+        className="aspect-auto rounded-full object-cover"
       />
 
-      <Link href={socialLinks.linkedIn} aria-label="LinkedIn" target="_blank">
-        <FaLinkedin
-          aria-label="LinkedIn"
-          className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
-        />
-      </Link>
+      <motion.div
+        className="flex w-full items-center justify-center gap-6 pb-4"
+        animate={controls}
+        variants={textAnimationVariants}
+        ref={ref}
+      >
+        <Link href={socialLinks.linkedIn} aria-label="LinkedIn" target="_blank">
+          <FaLinkedin
+            aria-label="LinkedIn"
+            className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
+          />
+        </Link>
 
-      <Link href={socialLinks.github} aria-label="GitHub" target="_blank">
-        <FaGithub
-          aria-label="GitHub"
-          className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
-        />
-      </Link>
-      <Link href={socialLinks.email} aria-label="Email">
-        <MdEmail
-          aria-label="Email"
-          className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
-        />
-      </Link>
-      <Link href={socialLinks.medium} aria-label="Medium" target="_blank">
-        <BsMedium
-          aria-label="Medium"
-          className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
-        />
-      </Link>
+        <Link href={socialLinks.github} aria-label="GitHub" target="_blank">
+          <FaGithub
+            aria-label="GitHub"
+            className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
+          />
+        </Link>
+        <Link href={socialLinks.email} aria-label="Email">
+          <MdEmail
+            aria-label="Email"
+            className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
+          />
+        </Link>
+        <Link
+          href={socialLinks.awsBuildCenter}
+          aria-label="AWS Build Center"
+          target="_blank"
+        >
+          <LiaAws
+            aria-label="AWS Build Center"
+            className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
+          />
+        </Link>
+        <Link href={socialLinks.medium} aria-label="Medium" target="_blank">
+          <BsMedium
+            aria-label="Medium"
+            className="text-black-light/80 dark:text-white-base/60 h-7 w-7 cursor-pointer rounded transition-all duration-200 ease-in-out hover:text-black dark:hover:text-white"
+          />
+        </Link>
+      </motion.div>
     </motion.div>
   );
 }

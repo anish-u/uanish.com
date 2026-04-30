@@ -33,4 +33,5 @@ export type SocialLinks = {
   github: string;
   medium: string;
   email: string;
+  awsBuildCenter: string;
 };

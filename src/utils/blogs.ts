@@ -2,6 +2,24 @@ import { Blog } from "@/interfaces/blog";
 
 export const blogs: Blog[] = [
   {
+    title:
+      "When “Same Value” Isn't Equal: A Java Equality Trap I Hit on LeetCode",
+    description:
+      "While solving LeetCode 872 (Leaf-Similar Trees), I ran into one of those bugs that makes you stare at your screen and whisper: But.. they're the same.",
+    link: "https://medium.com/@ummenthala.anish/when-same-value-isnt-equal-a-java-equality-trap-i-hit-on-leetcode-216d5634a1bb",
+    coverImage: "/images/blogs/java-same-values.png",
+    tags: ["Java"],
+  },
+  {
+    title:
+      "Automating Amazon Inspector Reports with AWS StepFunction, Lambda, S3, and SES",
+    description:
+      "Automating Amazon Inspector Reports with AWS Step Functions, S3, Lambda and SES. Export Inspector findings monthly and deliver reports via email.",
+    link: "https://medium.com/aws-in-plain-english/automating-amazon-inspector-reports-with-aws-lambda-s3-and-ses-c817650c13d1",
+    coverImage: "/images/blogs/inspector.png",
+    tags: ["AWS", "S3", "Lambda", "Step Functions", "Security"],
+  },
+  {
     title: "AWS Account Setup 101: Best Practices for Beginners",
     description:
       "Your AWS cloud journey begins not with servers, but with security. Learn how to secure your AWS account using best practices for security and cost.",
@@ -14,7 +32,7 @@ export const blogs: Blog[] = [
     description:
       "Learn how to create reports with Amazon Bedrock, building a powerful tool that automatically summarizes your IAM roles for easy management.",
     link: "https://medium.com/aws-in-plain-english/aws-account-setup-101-best-practices-for-beginners-1ae31e64a4ac",
-    coverImage: "/images/blogs/account-setup.png",
+    coverImage: "/images/blogs/iam-clarity.png",
     tags: ["AWS", "Bedrock", "Security"],
   },
   {

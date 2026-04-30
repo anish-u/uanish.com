@@ -41,7 +41,7 @@ export const projects: Project[] = [
     name: "NewsGrid - Full-Stack News Portal",
     description:
       "A role-based news portal built with PHP and MySQL, supporting article creation, bookmarking, admin panel, and PDF export using mPDF. Features secure login for admins, authors, and general users.",
-    technologies: ["PHP", "MySQL", "mPDF", "HTML", "JavaScript"],
+    technologies: ["PHP", "MySQL", "mPDF", "JQuery", "JavaScript"],
     github: "https://github.com/anish-u/NewsGrid",
   },
   {

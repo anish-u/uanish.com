@@ -51,7 +51,8 @@ export const navBarLinks: NavBarLink[] = [
  */
 export const socialLinks: SocialLinks = {
   linkedIn: "https://linkedin.com/in/uanish",
-  github: "https://github.com/Anish-U",
+  github: "https://github.com/anish-u",
   email: "mailto:ummenthala.anish@gmail",
   medium: "https://medium.com/@ummenthala.anish",
+  awsBuildCenter: "https://builder.aws.com/community/@anishu",
 };
