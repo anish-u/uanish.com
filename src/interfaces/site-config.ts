@@ -5,6 +5,8 @@ export type SiteConfig = {
   title: string;
   description: string;
   url: string;
+  /** Path under `public/`, used for Open Graph / Twitter cards */
+  ogImage: string;
 };
 
 /**

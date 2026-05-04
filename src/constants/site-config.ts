@@ -9,9 +9,11 @@ import {
  * Site config for meta tags
  */
 export const siteConfig: SiteConfig = {
-  title: "Anish Ummenthala",
-  description: "Anish's Portfolio",
+  title: "Anish Ummenthala | Software Engineer & AWS Developer",
+  description:
+    "Portfolio of Anish Ummenthala — software engineer focused on secure, scalable systems. Master's in Computer Science at CSUF, experience at Amazon and startups, with depth in AWS, Java, Python, and React/Next.js.",
   url: "https://uanish.com",
+  ogImage: "/images/profile.png",
 };
 
 /**

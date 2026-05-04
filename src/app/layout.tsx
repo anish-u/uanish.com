@@ -19,10 +19,13 @@ const merriweather = Merriweather({
   display: "swap",
 });
 
+const siteName = "Anish Ummenthala";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    template: `%s | ${siteName}`,
   },
   description: siteConfig.description,
   icons: {
@@ -34,14 +37,21 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
-    siteName: siteConfig.title,
+    siteName,
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        alt: `${siteName} — profile photo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
 };
 
