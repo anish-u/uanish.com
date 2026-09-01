@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -26,10 +26,6 @@ export default function ExperienceCard({
     margin: "0px 0px -10% 0px",
   });
 
-  useLayoutEffect(() => {
-    controls.set("hidden");
-  }, [controls]);
-
   useEffect(() => {
     if (inView) controls.start("show");
   }, [inView, controls]);
@@ -37,6 +33,7 @@ export default function ExperienceCard({
   return (
     <motion.div
       className="group relative z-10 transform-gpu font-serif"
+      initial="hidden"
       animate={controls}
       variants={cardAnimationVariants}
       custom={index}

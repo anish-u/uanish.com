@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -19,16 +19,13 @@ export default function Para({ children, index = 0 }: ParaProps) {
     margin: "0px 0px -10% 0px",
   });
 
-  useLayoutEffect(() => {
-    controls.set("hidden");
-  }, [controls]);
-
   useEffect(() => {
     if (inView) controls.start("show");
   }, [inView, controls]);
 
   return (
     <motion.p
+      initial="hidden"
       animate={controls}
       variants={textAnimationVariants}
       ref={ref}

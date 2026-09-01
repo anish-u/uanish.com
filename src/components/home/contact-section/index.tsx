@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -23,10 +23,6 @@ export default function ContactSection() {
     margin: "0px 0px -10% 0px",
   });
 
-  useLayoutEffect(() => {
-    controls.set("hidden");
-  }, [controls]);
-
   useEffect(() => {
     if (inView) controls.start("show");
   }, [inView, controls]);
@@ -34,6 +30,7 @@ export default function ContactSection() {
   return (
     <motion.div
       className="flex w-full flex-col items-center justify-center gap-6 pb-4"
+      initial="hidden"
       animate={controls}
       variants={textAnimationVariants}
       ref={ref}
@@ -49,9 +46,9 @@ export default function ContactSection() {
 
       <motion.div
         className="flex w-full items-center justify-center gap-6 pb-4"
+        initial="hidden"
         animate={controls}
         variants={textAnimationVariants}
-        ref={ref}
       >
         <Link href={socialLinks.linkedIn} aria-label="LinkedIn" target="_blank">
           <FaLinkedin

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -24,10 +24,6 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
     margin: "0px 0px -10% 0px",
   });
 
-  useLayoutEffect(() => {
-    controls.set("hidden");
-  }, [controls]);
-
   useEffect(() => {
     if (inView) controls.start("show");
   }, [inView, controls]);
@@ -36,6 +32,7 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
     <motion.div
       ref={ref}
       className="group relative z-10 transform-gpu font-serif"
+      initial="hidden"
       animate={controls}
       variants={cardAnimationVariants}
       custom={index}
