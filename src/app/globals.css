@@ -22,6 +22,29 @@
   --shadow-link-white: inset 0 -0.05em 0 #fff;
 }
 
+@layer base {
+  @media (hover: hover) and (pointer: fine) {
+    a,
+    button,
+    [role="button"],
+    summary,
+    [data-cursor-interactive] {
+      transition:
+        transform 0.2s ease-out,
+        opacity 0.2s ease-out;
+    }
+
+    a:hover,
+    button:hover,
+    [role="button"]:hover,
+    summary:hover,
+    [data-cursor-interactive]:hover {
+      transform: translateY(-1px);
+      opacity: 0.85;
+    }
+  }
+}
+
 @layer utilities {
   @keyframes scroll-right {
     0% {

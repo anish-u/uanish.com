@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 
+import CustomCursor from "@/components/common/custom-cursor";
 import Footer from "@/components/common/footer";
 import NavBar from "@/components/common/navbar";
 
@@ -76,6 +77,7 @@ export default function RootLayout({
         )}
       >
         <Providers>
+          <CustomCursor />
           <div className="mx-auto flex min-h-screen max-w-xl flex-col px-6 pt-10 pb-6 font-normal md:max-w-2xl lg:max-w-3xl">
             <NavBar />
             <div className="flex-grow">{children}</div>

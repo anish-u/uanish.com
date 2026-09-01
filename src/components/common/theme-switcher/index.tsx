@@ -25,19 +25,16 @@ export default function ThemeSwitch() {
     );
   }
 
-  return resolvedTheme === "dark" ? (
-    <FiSun
-      onClick={() => setTheme("light")}
-      className="cursor-pointer transition-opacity duration-200"
-      size={18}
-      aria-label="Switch to light mode"
-    />
-  ) : (
-    <FiMoon
-      onClick={() => setTheme("dark")}
-      className="cursor-pointer transition-opacity duration-200"
-      size={18}
-      aria-label="Switch to dark mode"
-    />
+  const isDark = resolvedTheme === "dark";
+
+  return (
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="inline-flex cursor-pointer items-center justify-center rounded transition-opacity duration-200"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {isDark ? <FiSun size={18} /> : <FiMoon size={18} />}
+    </button>
   );
 }
