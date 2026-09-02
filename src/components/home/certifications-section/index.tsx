@@ -34,7 +34,7 @@ export default function CertificationsSection() {
         viewport={{ once: true, amount: 0.25 }}
       >
         <Link
-          href=""
+          href="https://www.credly.com/users/uanish/badges/credly"
           className="bg-black-base/90 hover:bg-black-base dark:text-black-base dark:bg-white-base/90 dark:hover:bg-white-base w-full rounded-lg px-6 py-2 text-center text-xs font-bold text-white transition-all duration-250 ease-in-out md:w-[60%] md:text-sm"
         >
           View All Certifications
