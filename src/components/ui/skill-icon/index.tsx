@@ -1,27 +1,15 @@
-import Image from "next/image";
+import { Skill } from "@/utils/skills";
 
-export interface SkillIconProps {
-  link: string;
-  altName: string;
-}
+export type SkillIconProps = Skill;
 
-export default function SkillIcon({ link, altName }: SkillIconProps) {
+export default function SkillIcon({ name, Icon }: SkillIconProps) {
   return (
-    <div
-      data-cursor-interactive
-      className="group/skill flex shrink-0 items-center gap-2.5"
-    >
-      <span className="dark:bg-white-base/90 flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-md dark:p-1">
-        <Image
-          width={22}
-          height={22}
-          src={link}
-          alt={altName}
-          className="h-full w-full object-contain grayscale transition-all duration-200 ease-in-out group-hover/skill:grayscale-0"
-        />
+    <div className="group/skill flex shrink-0 items-center gap-3">
+      <span className="flex h-6 w-6 shrink-0 items-center justify-center">
+        <Icon size={30} alt={name} />
       </span>
       <span className="text-sm font-semibold whitespace-nowrap md:text-base">
-        {altName}
+        {name}
       </span>
     </div>
   );

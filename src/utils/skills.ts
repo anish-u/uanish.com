@@ -1,115 +1,155 @@
+import type { Icon } from "@dev.icons/react";
+import {
+  Aws,
+  CPlusplus,
+  ClaudeCode,
+  ClaudeIcon,
+  CloudflareIcon,
+  Css3Icon,
+  CursorIcon,
+  DjangoIcon,
+  DockerIcon,
+  Electron,
+  ExpoIcon,
+  FastapiIcon,
+  GitIcon,
+  GithubCopilot,
+  GithubIcon,
+  Go,
+  GoogleCloud,
+  Graphql,
+  Html5,
+  Java,
+  Javascript,
+  Jest,
+  KafkaIcon,
+  Kubernetes,
+  Langchain,
+  LanggraphIcon,
+  Langsmith,
+  Maven,
+  MicrosoftAzure,
+  MongodbIcon,
+  MysqlIcon,
+  NeonIcon,
+  Nestjs,
+  NextjsIcon,
+  Nginx,
+  NodejsIcon,
+  OllamaIcon,
+  OpenaiIcon,
+  OpentelemetryIcon,
+  Oracle,
+  PineconeIcon,
+  Postgresql,
+  Prisma,
+  Prometheus,
+  Puppeteer,
+  Python,
+  RedisIcon,
+  Solidity,
+  SpringIcon,
+  SupabaseIcon,
+  Swift,
+  TailwindIcon,
+  TerraformIcon,
+  TypescriptIcon,
+  Vite,
+  _React,
+} from "@dev.icons/react";
+
 export interface Skill {
-  link: string;
-  altName: string;
+  name: string;
+  Icon: Icon;
 }
 
-export const skills: Skill[] = [
+export interface SkillGroup {
+  category: string;
+  skills: Skill[];
+}
+
+export const skillGroups: SkillGroup[] = [
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    altName: "TypeScript",
+    category: "Languages",
+    skills: [
+      { name: "TypeScript", Icon: TypescriptIcon },
+      { name: "JavaScript", Icon: Javascript },
+      { name: "Python", Icon: Python },
+      { name: "Java", Icon: Java },
+      { name: "C++", Icon: CPlusplus },
+      { name: "GoLang", Icon: Go },
+      { name: "Swift", Icon: Swift },
+      { name: "Solidity", Icon: Solidity },
+    ],
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    altName: "JavaScript",
+    category: "Frontend & Frameworks",
+    skills: [
+      { name: "React.js", Icon: _React },
+      { name: "Next.js", Icon: NextjsIcon },
+      { name: "Node.js", Icon: NodejsIcon },
+      { name: "Tailwind CSS", Icon: TailwindIcon },
+      { name: "HTML", Icon: Html5 },
+      { name: "CSS", Icon: Css3Icon },
+      { name: "Vite", Icon: Vite },
+      { name: "Expo", Icon: ExpoIcon },
+      { name: "Electron", Icon: Electron },
+      { name: "Spring", Icon: SpringIcon },
+      { name: "Django", Icon: DjangoIcon },
+      { name: "FastAPI", Icon: FastapiIcon },
+      { name: "NestJS", Icon: Nestjs },
+      { name: "GraphQL", Icon: Graphql },
+    ],
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    altName: "React.js",
+    category: "Cloud, DevOps & Tooling",
+    skills: [
+      { name: "AWS", Icon: Aws },
+      { name: "GCP", Icon: GoogleCloud },
+      { name: "Azure", Icon: MicrosoftAzure },
+      { name: "Cloudflare", Icon: CloudflareIcon },
+      { name: "Docker", Icon: DockerIcon },
+      { name: "Kubernetes", Icon: Kubernetes },
+      { name: "Terraform", Icon: TerraformIcon },
+      { name: "Nginx", Icon: Nginx },
+      { name: "Git", Icon: GitIcon },
+      { name: "GitHub", Icon: GithubIcon },
+      { name: "Kafka", Icon: KafkaIcon },
+      { name: "Puppeteer", Icon: Puppeteer },
+      { name: "Jest", Icon: Jest },
+      { name: "Maven", Icon: Maven },
+      { name: "OpenTelemetry", Icon: OpentelemetryIcon },
+      { name: "Prometheus", Icon: Prometheus },
+    ],
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    altName: "Next.js",
+    category: "Databases",
+    skills: [
+      { name: "Postgres", Icon: Postgresql },
+      { name: "MySQL", Icon: MysqlIcon },
+      { name: "MongoDB", Icon: MongodbIcon },
+      { name: "Redis", Icon: RedisIcon },
+      { name: "Oracle", Icon: Oracle },
+      { name: "Neon", Icon: NeonIcon },
+      { name: "Supabase", Icon: SupabaseIcon },
+      { name: "Prisma", Icon: Prisma },
+      { name: "Pinecone", Icon: PineconeIcon },
+    ],
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    altName: "Node.js",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    altName: "Tailwind CSS",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    altName: "Java",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
-    altName: "Spring",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    altName: "Python",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
-    altName: "Django",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
-    altName: "C++",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg",
-    altName: "AWS",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
-    altName: "GCP",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg",
-    altName: "Docker",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg",
-    altName: "Kubernetes",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg",
-    altName: "Terraform",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-    altName: "Git",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-    altName: "GitHub",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg",
-    altName: "Postgres",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    altName: "MySQL",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg",
-    altName: "MongoDB",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
-    altName: "Redis",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg",
-    altName: "HTML",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg",
-    altName: "CSS",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
-    altName: "Jest",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg",
-    altName: "JUnit",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg",
-    altName: "Maven",
+    category: "AI & LLM Tooling",
+    skills: [
+      { name: "LangChain", Icon: Langchain },
+      { name: "LangGraph", Icon: LanggraphIcon },
+      { name: "LangSmith", Icon: Langsmith },
+      { name: "OpenAI", Icon: OpenaiIcon },
+      { name: "Ollama", Icon: OllamaIcon },
+      { name: "Claude", Icon: ClaudeIcon },
+      { name: "Claude Code", Icon: ClaudeCode },
+      { name: "Cursor", Icon: CursorIcon },
+      { name: "GitHub Copilot", Icon: GithubCopilot },
+    ],
   },
 ];
+
+export const skills: Skill[] = skillGroups.flatMap((group) => group.skills);

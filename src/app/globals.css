@@ -72,8 +72,8 @@
     animation: scroll-left 55s linear infinite;
   }
 
-  .group:hover .animate-scroll-left,
-  .group:hover .animate-scroll-right {
+  .animate-scroll-left:hover,
+  .animate-scroll-right:hover {
     animation-play-state: paused;
     transition: transform 2s ease-out;
   }
